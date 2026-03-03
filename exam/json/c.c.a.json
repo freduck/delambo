@@ -1,0 +1,302 @@
+ [
+    {
+      "question": "Which One of those is not a Component of Cultural and Creative arts?",
+      "options": [
+        "Dance",
+        "Fine Arts / Applied Arts",
+        "Drama",
+        "Playwrite"
+      ],
+      "answer": "Playwrite"
+    },
+    {
+      "question": "Fine art Comprises of the following except",
+      "options": [
+        "drawing",
+        "photography",
+        "sculpture",
+        " painting"
+      ],
+      "answer": "photography"
+    },
+    {
+      "question": "Which one of the following is an end-product of Ceramics?",
+      "options": [
+        " Mug",
+        "Kampala",
+        " printed pictures",
+        "chair"
+      ],
+      "answer": "Mug"
+    },
+    {
+      "question": "Team work ensures Smooth operation of a job being Carried out among  members of a group",
+      "options": [
+        "True",
+        "Fake",
+        "Maybe",
+        "Not  Sure"
+      ],
+      "answer": "True"
+    },
+    {
+      "question": "What happens when a member of a  production team refuses to cooperate with other members of the production team?",
+      "options": [
+        "it hampers the smooth  operation of the entire work at hand",
+        "it reduces the efficiency of other workers",
+        "Work is completed with short time None of the above",
+        "none of the above"
+      ],
+      "answer": "it hampers the smooth  operation of the entire work at hand"
+    },
+    {
+      "question": "Which One of the following is not a way of achieving sense of belonging",
+      "options": [
+        "Carefulness",
+        "Tolerance",
+        "attribution retraining Not Connecting with people",
+        "None of the options"
+      ],
+      "answer": "attribution retraining Not Connecting with people"
+    },
+    {
+      "question": "The distance between two points Usually associated with drawing is called",
+      "options": [
+        "line",
+        "Colour",
+        "Value",
+        "Texture "
+      ],
+      "answer": "line"
+    },
+    {
+      "question": "The Surface quality of an object or any artistic piece is Called",
+      "options": [
+        "Value",
+        "texture",
+        "Colour",
+        " line"
+      ],
+      "answer": "texture"
+    },
+    {
+      "question": "the dominance element among other visible  elements in a work of art is based on what principle of art and design?",
+      "options": [
+        "Balance",
+        "Proportion",
+        "Variety",
+        "Dominance"
+      ],
+      "answer": "Dominance"
+    },
+    {
+      "question": "The equal distribution of art elements in a work of art is based on what art Principle",
+      "options": [
+        "proportion",
+        "balance",
+        "rhythm",
+        "repetition"
+      ],
+      "answer": "proportion"
+    },
+    {
+      "question": "The process of allowing line, Colour and shape to feature. Severally in pattern making is based on what principle art and design Balance",
+      "options": [
+        "Balance",
+        "Proportion",
+        "Repetition",
+        "Harmony"
+      ],
+      "answer": "Harmony"
+    },
+    {
+      "question": "The general name given to a group of actors and actresses presented in order of appearance in a drama piece is_____ ",
+      "options": [
+        "Crew",
+        "Audience",
+        "Cast",
+        "Prompter"
+      ],
+      "answer": "Cast"
+    },
+    {
+      "question": "which One of the following is Now function of drama?",
+      "options": [
+        "it entertains",
+        "It kills Ideas",
+        "it informs",
+        "educates"
+      ],
+      "answer": "It kills Ideas"
+    },
+    {
+      "question": "Those  who are seated around to auditorium in a theatre are n to as",
+      "options": [
+        "Cast",
+        "Crew",
+        "Audience",
+        "Congregation"
+      ],
+      "answer": "Audience"
+    },
+    {
+      "question": "Which of these members of the Crews possess the technical skills In drama?",
+      "options": [
+        "Make-up artist",
+        "Cameraman",
+        "Costumier",
+        "Actors/Actress "
+      ],
+      "answer": "Cameraman"
+    },
+    {
+      "question": "The articles or artificial objects used by the the actor during a drama Performance are Called_____",
+      "options": [
+        "Prop",
+        "make up kits",
+        "Costume",
+        "None of the options"
+      ],
+      "answer": "Prop"
+    },
+    {
+      "question": "which One of the following materials is NOT required in paper mache?",
+      "options": [
+        "Clay",
+        "old news paper/ magazine",
+        "Liquid glue",
+        "starch paste"
+      ],
+      "answer": "Clay"
+    },
+    {
+      "question": "What is applied on the cuter Surface of the work in paper mache in order to adorn on decorate it?",
+      "options": [
+        "Colour",
+        "Paint brush",
+        "powder",
+        "Turpentine"
+      ],
+      "answer": "Turpentine"
+    },
+    {
+      "question": "the paper pulp is made Stronger when mixed with ___",
+      "options": [
+        "grease",
+        "Starch paste",
+        "linseed oil",
+        "none of the above"
+      ],
+      "answer": "Starch Paste"
+    },
+    {
+      "question": "___ means telling a story with movements",
+      "options": [
+        " Dance",
+        "Drama",
+        "Singing",
+        "storytelling"
+      ],
+      "answer": "Dance"
+    },
+    {
+      "question": "The drama Conveyed by dance Sometimes accompanied with dialog",
+      "options": [
+        "dance drama",
+        "tap dance",
+        "ballet",
+        "tango dance"
+      ],
+      "answer": ""
+    },
+    {
+      "question": "Buti buti and Badjao are Various Comic dances performed among the",
+      "options": [
+        "Romans",
+        "Greeks",
+        "Philippines",
+        "Spartans"
+      ],
+      "answer": "Philippines"
+    },
+    {
+      "question": "A form of dancers tapping the floor with gun pose built metal heeled Shoes and equally dance to the rhythm is Called",
+      "options": [
+        "Tap dance",
+        "ballet",
+        "tango dance",
+        "Comic dance"
+      ],
+      "answer": "Tap dance"
+    },
+    {
+      "question": "A form of dance that involves dance Performing fanny dance movement for entertainment is Called",
+      "options": [
+        "tap dance",
+        "Comic dance",
+        "pure dance",
+        "None of the above"
+      ],
+      "answer": "Comic dance"
+    },
+    {
+      "question": "_____ is a play performed by the Player to reveal a story through body movement and facial expression without uttering a word",
+      "options": [
+        "Mine",
+        " Melodrama ",
+        "Mask  drama",
+        "folk drama"
+      ],
+      "answer": " Melodrama "
+    },
+    {
+      "question": "A play Performed on stage by a Comedian comedienne which makes the audience laugh and ends happily is Called",
+      "options": [
+        " tragic Comedy",
+        "Comedy",
+        "melodrama",
+        "mask drama"
+      ],
+      "answer": "Comedy"
+    },
+    {
+      "question": "A play that has a blend of tragic and Comic elements is Called?",
+      "options": [
+        "tragic-Comedy",
+        "Comedy",
+        "melodrama",
+        "folk drama"
+      ],
+      "answer": "tragic-Comedy"
+    },
+    {
+      "question": "A play that is Characterized with tragic events which ends Sadly is",
+      "options": [
+        "Comedy",
+        "tragedy",
+        "tragic-Comedy",
+        "melodrama"
+      ],
+      "answer": "tragedy"
+    },
+    {
+      "question": "____ are the Changes in volume",
+      "options": [
+        "Dynamics",
+        "form Timbre",
+        "texture",
+        "all of the above"
+      ],
+      "answer": "Dynamics"
+    },
+    {
+      "question": "_____ describes how high or low a tone  is and it depends upon rapidity with a sounding body  Vibrates",
+      "options": [
+        "Structure",
+        "Rhythm",
+        "Melody",
+        "pitch"
+      ],
+      "answer": "pitch"
+    }
+  ]

@@ -1,0 +1,24 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+.navbar-expand{
+    padding: 30px;
+    background-color: crimson;
+    color: white;
+}
+.navbar-expand a{
+    padding: 10px;
+    color: white;
+    
+}
+.login-container{
+    padding:10px;
+    width: 600px;
+    margin: 0 auto;
+    
+} 
+.top ul li{
+float:left;    
+}

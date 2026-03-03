@@ -1,0 +1,141 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    width: 100%;
+}
+.container .header{
+    padding: 80px;
+    background-color: crimson;
+    color: white;
+    box-shadow: rgb(0, 0, 0,.07)2px 3px 8px 3px;
+}
+.header .right{
+    float: right;
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+} .header .right .head{
+    text-align: right;
+}
+.title{
+    margin: 20px 0 0 30px  ;
+}
+
+  #s-title{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 900;
+    color: crimson;
+    letter-spacing: 20px;
+    margin: 0 auto;
+    /* width: 1200px; */
+     margin: 200px 0 100px 100px; 
+     padding: 10px;
+
+    position: absolute;
+    z-index: 1000;
+   
+    border:1 px solid whitesmoke;
+    border-style:hidden;
+
+}
+.about{
+    margin: 50px 0  50px 0;
+    padding: 50px;
+    text-align: justify;
+    border: 1px solid whitesmoke;
+    box-shadow: rgba(0, 0, 0, .07) 2px 3px 3px 2px;
+}
+
+.nav-bar{
+    padding: 6px;
+    border: 1px solid whitesmoke;
+    width: 98%;
+    margin: 0 auto;
+    margin-top: 13px;
+    /* border-style: outset;
+     */
+border-radius: 6px;
+display: flex;
+justify-content: space-between;
+}
+.nav-bar a{
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+.nav-bar a:not(:first-of-type){
+    /* padding: 10px; */
+    display: inline-block;
+    border-left: 1px solid red;
+    text-align: center;
+    text-decoration: none;
+   
+}
+.nav-bar a:visited{
+    background-color: brown;
+}body{
+    overflow-x: hidden;
+}
+.about-header{
+    padding: 10px;
+    margin:10px 0 20px 0 ; text-align: center;
+    text-transform: uppercase;
+    color: crimson;
+}
+.about-the-school{
+    padding: 30px;
+}
+
+.footer{
+    padding: 50px;
+    background-color: crimson;
+}
+
+#footer {
+    display: grid;
+    grid-template-columns: 380px 380px 380px;
+    gap: 10px;
+}.left{
+    text-align: left;
+}.nav-bar a{
+    color:crimson;
+}
+.hidden{
+    display: none;
+}
+.menu{
+    /* display: none; */
+    padding: 30px;
+    background-color: crimson;
+    color: white;
+    width: 180px;
+    z-index: 1;
+    position: absolute;
+    box-shadow: rgba(0, 0, 0,.017)2px 2px 2px 2px;
+}.menu li{
+    padding: 5px;
+    margin-bottom: 5px;
+    list-style-type: none;
+}.drop-down span{
+    font-size: 30px;
+    cursor: pointer;
+}
+.menu li a{
+    color: white;
+}
+.drop-down{
+    animation:moveInLeft 2s ease-in-out;
+}
+@keyframes moveInLeft {
+    0%{
+        transform:  translateX(200px);
+    }
+    100%{
+        transform: translate(0);
+    }
+}

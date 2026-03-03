@@ -1,0 +1,17 @@
+INSERT INTO exam (subject, question, option_1, option_2, option_3, option_4, answer)
+VALUES
+('11', '______ is the study of the Past', 'Computer', 'fiction', 'literature', 'history', 'history'),
+('11', 'Nok was discovered in', '1982', '1928', '1938', '1920', '1928'),
+('11', 'Where was the Nok culture found', 'Abeokuta', 'Oyo', 'Kaduna', 'kana', 'Kaduna'),
+('11', '_____ was one of the oldest known civilization\'s in West Africa', 'Nok culture', 'Igbo – ukwe', 'Daima', '1000 Eleru', 'Nok culture'),
+('11', 'Nok was discovered during', 'Copper mining', 'tin mining', 'Ivory mining', 'crude Oil mining', 'tin mining'),
+('11', 'Nok Mysteriously Disappeared around ______', '200AD1500', '1500BC', '300AD', '1800 BC', '300AD'),
+('11', 'Sources are the information gotten through documented material', 'oral', 'Secondary', 'written', 'tertiary', 'written'),
+('11', 'The earliest human beings lived where?', 'Houses', 'hut', 'caves', 'shelter', 'caves'),
+('11', 'is the current king of lleifel', 'Oba Aremu Abadebo', 'Oba Adeyeye Ogunwusi', 'Oba Kayode Adetona', 'Oba Owolabi Olatulchin', 'Oba Adeyeye Ogunwusi'),
+('11', 'Lisabi Agbongbo Akala is a great warrior at', 'Lagos', 'Yewa', 'Egba', 'Epe', 'Egba'),
+('11', 'is a building where things for exhibition are kept', 'museum', 'groove', 'shop', 'super market', 'museum'),
+('11', 'The title of ruler in Egba land is____', 'Olu', 'Adedobun', 'Alake', 'Olubi', 'Alake'),
+('11', 'History is based on ______ affairs', 'Animals', 'trees', 'human', 'chairs', 'human'),
+('11', '______ and _____ are notable cultural festivals in Nigeria', 'Micheal Jackson song and pop', 'Toronto festival and foreign music', 'Osun Ogun cultural fetistival', 'Osun Osogbo festival and Argungu festival', 'Osun Osogbo festival and Argungu festival'),
+('11', 'Stories serves as to readers and listeners', 'Dream', 'song', 'entertainment', 'fatigue', 'entertainment');

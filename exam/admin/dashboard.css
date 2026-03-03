@@ -1,0 +1,21 @@
+.admin-container{
+	padding: 10px;
+	display: grid;
+	grid-template-columns: 150px 900px;
+	margin-top: 20px;
+	border: 1px solid  whitesmoke;
+}
+.drop-down-inner{
+	padding: 10px;
+
+}
+.drop-down-inner ul li{
+	padding: 6px;
+	border: 1px solid whitesmoke;
+	list-style-type: none;
+}
+.admin-container .right{
+	margin-left: 20px;border:1px solid whitesmoke;
+	padding: 20px;
+
+}

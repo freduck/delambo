@@ -1,0 +1,93 @@
+*{
+    padding: 0;margin: 0;
+}
+div.top{
+    padding: 60px;
+    background-color: crimson;
+    color: white;
+}
+.login-panel{
+    padding: 50px;
+    width: 500px;
+    border: 1px solid whitesmoke;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.login-panel form .space{
+    padding: 10px;
+    margin: 5px 0 5px 0;
+}
+#uname,#password{
+    padding: 10px;width: 100%;
+    border: 1px solid whitesmoke;
+    border-radius: 6px;
+    outline: none;
+}.login-panel h1{
+    color: crimson;
+    text-align: center;
+}
+#result{
+    padding: 30px;
+    color: green;
+    text-align: center;
+    animation: floatRight .2s ease-in-out;
+}
+.right{
+    width: 400px;
+    float: right;
+    display: flex;
+    flex-direction: row;
+}.row{
+    display: grid;
+    width: 400px;
+    grid-template-columns: 250px 250px;
+    gap: 10px;
+    position: relative;
+}
+.right h2{
+    text-align: right;
+}
+.register-form h2{
+    text-align: center;
+    color: crimson;
+}
+#address,#password,#fname,#tel{
+    padding: 10px;
+    width: 100%;
+    border: 1px solid whitesmoke;
+    border-radius: 6px;
+    outline: none;
+}
+.right a{
+    color: white;
+    display: inline-block;
+    margin: 5px 0 0 5px;
+    text-decoration: none;
+}
+button{
+    padding: 10px;
+    background-color: crimson;
+    color: white;
+    border: 1px solid whitesmoke;
+    border-radius: 6px;
+    width: 70px;
+    cursor: pointer;
+    box-shadow: rgba(0,0,0,.07) .5px .5px .5px .5px;
+}
+.head{
+    text-transform: uppercase;
+}h3{
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    color: crimson;
+}
+@keyframes myObject {
+    0%{
+        transform: translateX(200px);
+    }
+    100%{
+        transform: translate(0);
+    }
+    
+}
