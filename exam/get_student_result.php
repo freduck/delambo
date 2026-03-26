@@ -6,24 +6,24 @@
 require "admin/config.php";
 $select=$conn->query("SELECT * FROM subject");
 
-$select_2=$conn->query("SELECT * FROM result");
+$select_2=$conn->query("SELECT * FROM second_term");
 $select_5=$conn->query("SELECT * FROM settings");
 $school=$select_5->fetch_assoc();
 if(isset($_GET['name'])){
     $name=$_GET['name'];
-        $select4=$conn->query("SELECT * FROM result WHERE student_name='$name'");
-    $select_3=$conn->query("SELECT students.*,result.* FROM students JOIN result ON students.name=result.student_name WHERE name='$name'");
+        $select4=$conn->query("SELECT * FROM second_term WHERE student_name='$name'");
+    $select_3=$conn->query("SELECT students.*,second_term.* FROM students JOIN second_term ON students.name=second_term.student_name WHERE name='$name'");
     $row2=$select_3->fetch_assoc();
-    $select_2=$conn->query("SELECT * FROM result WHERE student_name='$name'");
+    $select_2=$conn->query("SELECT * FROM second_term WHERE student_name='$name'");
 $row3=$select_2->fetch_assoc();
 }
 if(isset($_POST['submit']) ){
     extract($_POST);
     $name=trim($_POST['name']);
-    $select4=$conn->query("SELECT * FROM result WHERE student_name='$name'");
-    $select_3=$conn->query("SELECT students.*,result.* FROM students JOIN result ON students.name=result.student_name WHERE name='$name'");
+    $select4=$conn->query("SELECT * FROM second_term WHERE student_name='$name'");
+    $select_3=$conn->query("SELECT students.*,second_term.* FROM students JOIN second_term ON students.name=second_term.student_name WHERE name='$name'");
     $row2=$select_3->fetch_assoc();
-    $select_2=$conn->query("SELECT * FROM result WHERE student_name='$name'");
+    $select_2=$conn->query("SELECT * FROM second_term WHERE student_name='$name'");
 $row3=$select_2->fetch_assoc();
     // echo "<img src='admin/".$row2['image']."'>";
 }else{
@@ -31,7 +31,7 @@ $row3=$select_2->fetch_assoc();
 }
 if(isset($_POST['name'])){
    extract($_POST);
-$sql = "SELECT AVG(total_score) AS average_score, (SUM(total_score) / COUNT(*) * 100) AS percentage_score,SUM(total_score) AS total FROM result WHERE student_name='$name'";
+$sql = "SELECT AVG(total_score) AS average_score, (SUM(total_score) / COUNT(*) * 100) AS percentage_score,SUM(total_score) AS total FROM second_term WHERE student_name='$name'";
 
 // Execute query
 $result = $conn->query($sql);

@@ -99,6 +99,15 @@ echo $row['subject_name'];
    
         <input type="text" class="grade" name="grade" placeholder="Grade"><br><br>
 
+        
+        <select name="term" required class="term">
+            <option value="">Term</option>
+            <option value="FIRST"> FIRST</option>
+            <option value="SECOND">SECOND</option>
+            
+
+        </select><br><br>
+
         <button type="submit">Submit</button>
     </div>
     </form>
@@ -174,12 +183,12 @@ e.preventDefault();
                     exam:$('.exam').val(),
                     total_score:$('.total_score').val(),                   
                     grade:$('.grade').val()
-                    // average: $('.average').val()              
+                    term: $('.term').val()              
                 };
                 $.ajax({
                     type: 'POST',
                     url: 'upload_result.php',                                
-                    data:'name='+ formData.name+'&subject='+formData.subject+'&test_1='+formData.test_1+'&test_2='+formData.test_2+'&ca_total='+formData.ca_total+'&exam='+formData.exam+'&total_score='+formData.total_score+'&grade='+formData.grade,
+                    data:'name='+ formData.name+'&subject='+formData.subject+'&test_1='+formData.test_1+'&test_2='+formData.test_2+'&ca_total='+formData.ca_total+'&exam='+formData.exam+'&total_score='+formData.total_score+'&grade='+formData.grade+'term='+formData.term,
                     success: function(response) {
                         console.log(response);
                         alert('Data sent successfully!');

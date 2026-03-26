@@ -19,6 +19,8 @@ while($row=$select_2->fetch_assoc()){
 
             ?>
         </datalist>
+
+      
       
         <button type="submit" name="submit">Submit</button>
     </form>
@@ -49,5 +51,7 @@ while($row=$select_2->fetch_assoc()){
         datalist{
             padding:10px;
             width: 100%;
+        }#term{
+          padding: 10px;
         }
     </style>
