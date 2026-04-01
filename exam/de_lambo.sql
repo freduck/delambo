@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 08, 2025 at 11:58 AM
+-- Generation Time: Apr 01, 2026 at 04:26 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -1555,6 +1555,7 @@ CREATE TABLE `result` (
   `id` int(11) NOT NULL,
   `student_name` text NOT NULL,
   `subject` varchar(225) NOT NULL,
+  `term` text NOT NULL,
   `test_1` int(11) NOT NULL,
   `test_2` int(11) NOT NULL,
   `ca_total` float NOT NULL,
@@ -1569,85 +1570,192 @@ CREATE TABLE `result` (
 -- Dumping data for table `result`
 --
 
-INSERT INTO `result` (`id`, `student_name`, `subject`, `test_1`, `test_2`, `ca_total`, `exam`, `total_score`, `grade`, `teacher_comment`, `principal_comment`) VALUES
-(1, 'SHEHU UMAIRAH', 'math', 10, 16, 26, 60, 86, 'A', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(2, 'SHEHU ZAINAB', 'math', 10, 14, 24, 55, 79, 'A', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(3, 'ADENIJI JUBRIL', 'math', 6, 8, 14, 40, 54, 'C', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(4, 'OLALEKAN AL-AMEEN', 'math', 7, 7, 14.5, 45, 59, 'BC', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(5, 'OLAREWAJU AYOMIDE', 'math', 6, 11, 17, 38, 55, 'C', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(6, 'OYELAMI JOSEPH', 'math', 6, 10, 16, 40, 56, 'BC', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(7, 'SHEHU UMAIRAH', 'literature', 10, 16, 26, 67, 93, 'A', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(8, 'SHEHU ZAINAB', 'literature', 10, 15, 25, 67, 92, 'A', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(9, 'ADENIJI JUBRIL', 'literature', 5, 14, 19, 57, 76, 'A', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(10, 'OLALEKAN AL-AMEEN', 'literature', 10, 10, 20, 57, 77, 'A', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(11, 'OLAREWAJU AYOMIDE', 'literature', 10, 12, 22, 54, 76, 'A', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(12, 'OYELAMI JOSEPH', 'literature', 10, 13, 23, 67, 90, 'A', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(13, 'SHEHU UMAIRAH', 'c.r.k', 8, 19, 27, 63, 90, 'A', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(14, 'SHEHU ZAINAB', 'c.r.k', 10, 17, 27, 55, 82, 'A', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(15, 'OYELAMI JOSEPH', 'c.r.k', 10, 18, 28, 60, 88, 'A', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(16, 'OLAREWAJU AYOMIDE', 'c.r.k', 8, 15, 23, 45, 68, 'B', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(17, 'OLALEKAN AL-AMEEN', 'c.r.k', 10, 15, 25, 38, 63, 'B', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(18, 'ADENIJI JUBRIL', 'c.r.k', 6, 17, 23, 45, 68, 'B', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(19, 'SHEHU UMAIRAH', 'intermediate Science', 10, 12, 22, 56, 78, 'A', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(20, 'SHEHU ZAINAB', 'intermediate Science', 10, 12, 22, 49, 71, 'AB', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(21, 'ADENIJI JUBRIL', 'intermediate Science', 8, 9, 17, 47, 64, 'B', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(22, 'OLALEKAN AL-AMEEN', 'intermediate Science', 10, 11, 21, 48, 68, 'B', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(23, 'OLAREWAJU AYOMIDE', 'intermediate Science', 10, 10, 20, 47, 67, 'B', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(24, 'OYELAMI JOSEPH', 'intermediate Science', 10, 11, 21, 48, 69, 'B', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(25, 'SHEHU UMAIRAH', 'digital technology', 10, 18, 28, 52, 80, 'A', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(26, 'SHEHU ZAINAB', 'digital technology', 10, 18, 28, 58, 86, 'A', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(27, 'OYELAMI JOSEPH', 'digital technology', 10, 18, 28, 45, 73, 'AB', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(28, 'OLAREWAJU AYOMIDE', 'digital technology', 10, 12, 22, 40, 62, 'B', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(29, 'OLALEKAN AL-AMEEN', 'digital technology', 10, 14, 24, 47, 71, 'AB', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(30, 'ADENIJI JUBRIL', 'digital technology', 10, 12, 22, 46, 68, 'B', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(31, 'ADENIJI JUBRIL', 'history', 8, 8, 16, 54, 70, 'AB', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(32, 'OLAREWAJU AYOMIDE', 'history', 10, 11, 21, 52, 73, 'AB', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(33, 'OLALEKAN AL-AMEEN', 'history', 10, 8, 18, 56, 74, 'AB', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(34, 'OYELAMI JOSEPH', 'history', 10, 12, 22, 66, 88, 'A', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(35, 'SHEHU UMAIRAH', 'history', 10, 12, 22, 66, 88, 'A', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(36, 'SHEHU ZAINAB', 'history', 10, 12, 21, 66, 83, 'A', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(37, 'SHEHU UMAIRAH', 'business studies', 10, 13, 23, 68, 91, 'A', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(38, 'SHEHU ZAINAB', 'business studies', 10, 14, 24, 60, 84, 'A', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(39, 'OYELAMI JOSEPH', 'business studies', 10, 13, 23, 59, 82, 'A', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(40, 'OLALEKAN AL-AMEEN', 'business studies', 10, 13, 23, 57, 80, 'A', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(41, 'OLAREWAJU AYOMIDE', 'business studies', 10, 13, 23, 58, 81, 'A', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(42, 'ADENIJI JUBRIL', 'business studies', 8, 12, 20, 52, 72, 'AB', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(43, 'SHEHU UMAIRAH', 'Social and citizenship studes', 10, 12, 22, 68, 90, 'A', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(44, 'SHEHU ZAINAB', 'Social and citizenship studes', 10, 13, 23, 65, 88, 'A', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(45, 'OYELAMI JOSEPH', 'Social and citizenship studes', 10, 12, 22, 53, 75, 'AB', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(46, 'OLALEKAN AL-AMEEN', 'Social and citizenship studes', 10, 4, 14, 60, 74, 'AB', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(47, 'ADENIJI JUBRIL', 'Social and citizenship studes', 10, 9, 19, 54, 73, 'AB', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(48, 'SHEHU UMAIRAH', 'p.h.e', 10, 12, 22, 43, 65, 'B', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(49, 'SHEHU ZAINAB', 'p.h.e', 10, 7, 17, 40, 57, 'BC', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(50, 'OLALEKAN AL-AMEEN', 'p.h.e', 10, 11, 21, 26, 47, 'CD', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(51, 'OLAREWAJU AYOMIDE', 'p.h.e', 10, 6, 16, 26, 42, 'E', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(52, 'OYELAMI JOSEPH', 'p.h.e', 10, 13, 23, 43, 66, 'B', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(53, 'ADENIJI JUBRIL', 'p.h.e', 10, 12, 22, 36, 58, 'BC', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(54, 'ADENIJI JUBRIL', 'Yoruba', 7, 9, 16, 47, 63, 'B', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(55, 'OLAREWAJU AYOMIDE', 'Yoruba', 10, 10, 20, 44, 64, 'B', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(56, 'OLALEKAN AL-AMEEN', 'Yoruba', 10, 11, 21, 56, 77, 'A', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(57, 'OYELAMI JOSEPH', 'Yoruba', 10, 11, 21, 54, 75, 'AB', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(58, 'SHEHU UMAIRAH', 'Yoruba', 10, 13, 23, 60, 83, 'A', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(59, 'SHEHU ZAINAB', 'Yoruba', 10, 12, 22, 60, 82, 'A', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(60, 'SHEHU UMAIRAH', 'English', 10, 17, 27, 61, 88, 'A', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(61, 'SHEHU ZAINAB', 'English', 10, 17, 27, 49, 76, 'A', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(62, 'OYELAMI JOSEPH', 'English', 10, 14, 24, 47, 71, 'AB', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(63, 'OLAREWAJU AYOMIDE', 'English', 10, 15, 25, 42, 67, 'B', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(64, 'OLALEKAN AL-AMEEN', 'English', 10, 13, 23, 50, 73, 'AB', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(65, 'OLAREWAJU AYOMIDE', 'Social and citizenship studes', 10, 11, 21, 59, 80, 'A', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(66, 'ADENIJI JUBRIL', 'English', 10, 16, 26, 43, 69, 'B', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(67, 'SHEHU UMAIRAH', 'C.C.A', 10, 15, 25, 50, 75, 'AB', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(68, 'SHEHU ZAINAB', 'C.C.A', 10, 11, 21, 40, 61, 'B', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(69, 'OYELAMI JOSEPH', 'C.C.A', 10, 15, 25, 47, 72, 'AB', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(70, 'OLALEKAN AL-AMEEN', 'C.C.A', 10, 9, 19, 52, 71, 'AB', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(71, 'OLAREWAJU AYOMIDE', 'C.C.A', 10, 11, 21, 39, 60, 'B', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(72, 'ADENIJI JUBRIL', 'C.C.A', 8, 14, 22, 32, 54, 'C', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(73, 'SHEHU UMAIRAH', 'home-economics', 10, 17, 27, 56, 83, 'A', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(74, 'SHEHU ZAINAB', 'home-economics', 10, 15, 25, 58, 83, 'A', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(75, 'OYELAMI JOSEPH', 'home-economics', 10, 15, 25, 60, 85, 'A', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(76, 'OLAREWAJU AYOMIDE', 'home-economics', 10, 8, 18, 57, 75, 'AB', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(77, 'OLALEKAN AL-AMEEN', 'home-economics', 10, 13, 23, 56, 79, 'A', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement'),
-(78, 'ADENIJI JUBRIL', 'home-economics', 8, 12, 20, 58, 78, 'A', 'Good Result, try to improve on your performance ', 'Good result, however there is need for improvement');
+INSERT INTO `result` (`id`, `student_name`, `subject`, `term`, `test_1`, `test_2`, `ca_total`, `exam`, `total_score`, `grade`, `teacher_comment`, `principal_comment`) VALUES
+(1, 'SHEHU UMAIRAH', 'math', 'FIRST', 10, 16, 26, 60, 86, 'A', 'An Excellent result keep it up', 'You have displayed a commendable efforts and positive attitude to school activities, excellent result keep it up'),
+(2, 'SHEHU ZAINAB', 'math', 'FIRST', 10, 14, 24, 55, 79, 'A', 'A very good result keep it up', 'You have adjusted well to the academic demands and showed good behaviour and enthusiasm for learning'),
+(3, 'ADENIJI JUBRIL', 'math', 'FIRST', 6, 8, 14, 40, 54, 'C', 'Keep working hard, in other to improve in your performance next term', 'An average performance, you need to put more effort, concentration and regular study habit to meet the expectation of Junior Secondary School.'),
+(4, 'OLALEKAN AL-AMEEN', 'math', 'FIRST', 7, 7, 14.5, 45, 59, 'BC', 'Keep working hard, in other to improve in your performance next term', 'You have showed good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured  '),
+(5, 'OLAREWAJU AYOMIDE', 'math', 'FIRST', 6, 11, 17, 38, 55, 'C', 'Keep working hard, in other to improve in your performance next term', 'I encourage you to build a strong study habit and strive for continuous improvement'),
+(6, 'OYELAMI JOSEPH', 'math', 'FIRST', 6, 10, 16, 40, 56, 'BC', 'Keep working hard, in other to improve in your performance next term', 'You have demonstrated a steady academic progress greater success awaits you'),
+(7, 'SHEHU UMAIRAH', 'literature', 'FIRST', 10, 16, 26, 67, 93, 'A', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(8, 'SHEHU ZAINAB', 'literature', 'FIRST', 10, 15, 25, 67, 92, 'A', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(9, 'ADENIJI JUBRIL', 'literature', 'FIRST', 5, 14, 19, 57, 76, 'A', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(10, 'OLALEKAN AL-AMEEN', 'literature', 'FIRST', 10, 10, 20, 57, 77, 'A', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(11, 'OLAREWAJU AYOMIDE', 'literature', 'FIRST', 10, 12, 22, 54, 76, 'A', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(12, 'OYELAMI JOSEPH', 'literature', 'FIRST', 10, 13, 23, 67, 90, 'A', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(13, 'SHEHU UMAIRAH', 'c.r.k', 'FIRST', 8, 19, 27, 63, 90, 'A', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(14, 'SHEHU ZAINAB', 'c.r.k', 'FIRST', 10, 17, 27, 55, 82, 'A', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(15, 'OYELAMI JOSEPH', 'c.r.k', 'FIRST', 10, 18, 28, 60, 88, 'A', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(16, 'OLAREWAJU AYOMIDE', 'c.r.k', 'FIRST', 8, 15, 23, 45, 68, 'B', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(17, 'OLALEKAN AL-AMEEN', 'c.r.k', 'FIRST', 10, 15, 25, 38, 63, 'B', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(18, 'ADENIJI JUBRIL', 'c.r.k', 'FIRST', 6, 17, 23, 45, 68, 'B', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(19, 'SHEHU UMAIRAH', 'intermediate Science', 'FIRST', 10, 12, 22, 56, 78, 'A', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(20, 'SHEHU ZAINAB', 'intermediate Science', 'FIRST', 10, 12, 22, 49, 71, 'AB', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(21, 'ADENIJI JUBRIL', 'intermediate Science', 'FIRST', 8, 9, 17, 47, 64, 'B', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(22, 'OLALEKAN AL-AMEEN', 'intermediate Science', 'FIRST', 10, 11, 21, 48, 68, 'B', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(23, 'OLAREWAJU AYOMIDE', 'intermediate Science', 'FIRST', 10, 10, 20, 47, 67, 'B', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(24, 'OYELAMI JOSEPH', 'intermediate Science', 'FIRST', 10, 11, 21, 48, 69, 'B', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(25, 'SHEHU UMAIRAH', 'digital technology', 'FIRST', 10, 18, 28, 52, 80, 'A', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(26, 'SHEHU ZAINAB', 'digital technology', 'FIRST', 10, 18, 28, 58, 86, 'A', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(27, 'OYELAMI JOSEPH', 'digital technology', 'FIRST', 10, 18, 28, 45, 73, 'AB', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(28, 'OLAREWAJU AYOMIDE', 'digital technology', 'FIRST', 10, 12, 22, 40, 62, 'B', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(29, 'OLALEKAN AL-AMEEN', 'digital technology', 'FIRST', 10, 14, 24, 47, 71, 'AB', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(30, 'ADENIJI JUBRIL', 'digital technology', 'FIRST', 10, 12, 22, 46, 68, 'B', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(31, 'ADENIJI JUBRIL', 'history', 'FIRST', 8, 8, 16, 54, 70, 'AB', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(32, 'OLAREWAJU AYOMIDE', 'history', 'FIRST', 10, 11, 21, 52, 73, 'AB', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(33, 'OLALEKAN AL-AMEEN', 'history', 'FIRST', 10, 8, 18, 56, 74, 'AB', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(34, 'OYELAMI JOSEPH', 'history', 'FIRST', 10, 12, 22, 66, 88, 'A', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(35, 'SHEHU UMAIRAH', 'history', 'FIRST', 10, 12, 22, 66, 88, 'A', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(36, 'SHEHU ZAINAB', 'history', 'FIRST', 10, 12, 21, 66, 83, 'A', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(37, 'SHEHU UMAIRAH', 'business studies', 'FIRST', 10, 13, 23, 68, 91, 'A', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(38, 'SHEHU ZAINAB', 'business studies', 'FIRST', 10, 14, 24, 60, 84, 'A', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(39, 'OYELAMI JOSEPH', 'business studies', 'FIRST', 10, 13, 23, 59, 82, 'A', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(40, 'OLALEKAN AL-AMEEN', 'business studies', 'FIRST', 10, 13, 23, 57, 80, 'A', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(41, 'OLAREWAJU AYOMIDE', 'business studies', 'FIRST', 10, 13, 23, 58, 81, 'A', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(42, 'ADENIJI JUBRIL', 'business studies', 'FIRST', 8, 12, 20, 52, 72, 'AB', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(43, 'SHEHU UMAIRAH', 'Social and citizenship studes', 'FIRST', 10, 12, 22, 68, 90, 'A', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(44, 'SHEHU ZAINAB', 'Social and citizenship studes', 'FIRST', 10, 13, 23, 65, 88, 'A', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(45, 'OYELAMI JOSEPH', 'Social and citizenship studes', 'FIRST', 10, 12, 22, 53, 75, 'AB', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(46, 'OLALEKAN AL-AMEEN', 'Social and citizenship studes', 'FIRST', 10, 4, 14, 60, 74, 'AB', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(47, 'ADENIJI JUBRIL', 'Social and citizenship studes', 'FIRST', 10, 9, 19, 54, 73, 'AB', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(48, 'SHEHU UMAIRAH', 'p.h.e', 'FIRST', 10, 12, 22, 43, 65, 'B', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(49, 'SHEHU ZAINAB', 'p.h.e', 'FIRST', 10, 7, 17, 40, 57, 'BC', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(50, 'OLALEKAN AL-AMEEN', 'p.h.e', 'FIRST', 10, 11, 21, 36, 57, 'C', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(51, 'OLAREWAJU AYOMIDE', 'p.h.e', 'FIRST', 10, 6, 16, 36, 52, 'C', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(52, 'OYELAMI JOSEPH', 'p.h.e', 'FIRST', 10, 13, 23, 43, 66, 'B', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(53, 'ADENIJI JUBRIL', 'p.h.e', 'FIRST', 10, 12, 22, 36, 58, 'BC', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(54, 'ADENIJI JUBRIL', 'Yoruba', 'FIRST', 7, 9, 16, 47, 63, 'B', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(55, 'OLAREWAJU AYOMIDE', 'Yoruba', 'FIRST', 10, 10, 20, 44, 64, 'B', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(56, 'OLALEKAN AL-AMEEN', 'Yoruba', 'FIRST', 10, 11, 21, 56, 77, 'A', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(57, 'OYELAMI JOSEPH', 'Yoruba', 'FIRST', 10, 11, 21, 54, 75, 'AB', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(58, 'SHEHU UMAIRAH', 'Yoruba', 'FIRST', 10, 13, 23, 60, 83, 'A', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(59, 'SHEHU ZAINAB', 'Yoruba', 'FIRST', 10, 12, 22, 60, 82, 'A', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(60, 'SHEHU UMAIRAH', 'English', 'FIRST', 10, 17, 27, 61, 88, 'A', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(61, 'SHEHU ZAINAB', 'English', 'FIRST', 10, 17, 27, 49, 76, 'A', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(62, 'OYELAMI JOSEPH', 'English', 'FIRST', 10, 14, 24, 47, 71, 'AB', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(63, 'OLAREWAJU AYOMIDE', 'English', 'FIRST', 10, 15, 25, 42, 67, 'B', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(64, 'OLALEKAN AL-AMEEN', 'English', 'FIRST', 10, 13, 23, 50, 73, 'AB', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(65, 'OLAREWAJU AYOMIDE', 'Social and citizenship studes', 'FIRST', 10, 11, 21, 59, 80, 'A', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(66, 'ADENIJI JUBRIL', 'English', 'FIRST', 10, 16, 26, 43, 69, 'B', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(67, 'SHEHU UMAIRAH', 'C.C.A', 'FIRST', 10, 15, 25, 50, 75, 'AB', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(68, 'SHEHU ZAINAB', 'C.C.A', 'FIRST', 10, 11, 21, 40, 61, 'B', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(69, 'OYELAMI JOSEPH', 'C.C.A', 'FIRST', 10, 15, 25, 47, 72, 'AB', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(70, 'OLALEKAN AL-AMEEN', 'C.C.A', 'FIRST', 10, 9, 19, 52, 71, 'AB', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(71, 'OLAREWAJU AYOMIDE', 'C.C.A', 'FIRST', 10, 11, 21, 39, 60, 'B', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(72, 'ADENIJI JUBRIL', 'C.C.A', 'FIRST', 8, 14, 22, 32, 54, 'C', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(73, 'SHEHU UMAIRAH', 'home-economics', 'FIRST', 10, 17, 27, 56, 83, 'A', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(74, 'SHEHU ZAINAB', 'home-economics', 'FIRST', 10, 15, 25, 58, 83, 'A', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(75, 'OYELAMI JOSEPH', 'home-economics', 'FIRST', 10, 15, 25, 60, 85, 'A', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(76, 'OLAREWAJU AYOMIDE', 'home-economics', 'FIRST', 10, 8, 18, 57, 75, 'AB', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(77, 'OLALEKAN AL-AMEEN', 'home-economics', 'FIRST', 10, 13, 23, 56, 79, 'A', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured'),
+(78, 'ADENIJI JUBRIL', 'home-economics', 'FIRST', 8, 12, 20, 58, 78, 'A', 'Keep working hard, in other to improve in your performance next term', 'you have showed a good behaviour and enthusiasm for learning with continued focus and consistency greater success is assured');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `second_term`
+--
+
+CREATE TABLE `second_term` (
+  `id` int(11) NOT NULL,
+  `student_name` varchar(255) NOT NULL,
+  `subject` varchar(100) NOT NULL,
+  `term` varchar(50) NOT NULL,
+  `test_1` decimal(5,2) DEFAULT 0.00,
+  `test_2` decimal(5,2) DEFAULT 0.00,
+  `ca_total` decimal(5,2) DEFAULT 0.00,
+  `exam` decimal(5,2) DEFAULT 0.00,
+  `total` decimal(5,2) DEFAULT 0.00,
+  `grade` varchar(5) DEFAULT NULL,
+  `teacher_comment` text DEFAULT NULL,
+  `principal_comment` text DEFAULT NULL,
+  `image` varchar(255) DEFAULT 'default.png',
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `second_term`
+--
+
+INSERT INTO `second_term` (`id`, `student_name`, `subject`, `term`, `test_1`, `test_2`, `ca_total`, `exam`, `total`, `grade`, `teacher_comment`, `principal_comment`, `image`, `created_at`) VALUES
+(2, 'OLALEKAN AL-AMEEN', 'MATHS', 'Second Term', 10.00, 7.00, 17.00, 47.00, 64.00, 'BC', 'GOOD RESULT', 'WORK HARDER NEXT TERM', 'second_term/al-ameen.jpg', '2026-03-25 15:32:45'),
+(3, 'OLAREWAJU AYOMIDE VICTOR', 'MATHS', 'Second Term', 10.00, 4.00, 14.00, 46.00, 60.00, 'BC', 'WORK HARDER NEXT TERM', 'GOOD RESULT', 'second_term/ayomide.jpg', '2026-03-25 15:35:00'),
+(4, 'OYELAMI JOSEPH', 'MATHS', 'Second Term', 10.00, 6.00, 16.00, 44.00, 60.00, 'BC', 'GOOD RESULT,KEEP IT UP', 'GOOD RESULT', 'second_term/ayanfe.jpg', '2026-03-25 15:36:21'),
+(5, 'SHEHU UMAIRAH', 'MATHS', 'Second Term', 10.00, 12.00, 22.00, 58.00, 80.00, 'A+', 'EXCELLENT RESULT KEEP IT UP', 'EXCELLENT RESULT', 'second_term/umarah.jpg', '2026-03-25 15:37:50'),
+(6, 'SHEHU ZAINAB', 'MATHS', 'Second Term', 10.00, 8.00, 18.00, 57.00, 75.00, 'A', 'EXCELLENT RESULT', 'EXCELLENT RESULT KEEP IT UP', 'second_term/zainab.jpg', '2026-03-25 15:39:23'),
+(7, 'SHEHU ZAINAB', 'C.R.K', 'Second Term', 10.00, 11.00, 21.00, 65.00, 86.00, 'A+', 'EXCELLENT RESULT', 'GOOD JOB KEEP IT UP', 'second_term/zainab.jpg', '2026-03-25 15:41:09'),
+(9, 'OLALEKAN AL-AMEEN', 'C.R.K', 'Second Term', 13.00, 10.00, 23.00, 53.00, 76.00, 'A', 'WORK HARD NEXT TERM ', 'TRY HARDER', 'second_term/al-ameen.jpg', '2026-03-26 09:33:39'),
+(10, 'OLAREWAJU AYOMIDE VICTOR', 'C.R.K', 'Second Term', 8.00, 8.00, 16.00, 58.00, 74.00, 'AB', 'GOOD RESULT', 'GOOD RESULT', 'second_term/ayomide.jpg', '2026-03-26 09:39:41'),
+(11, 'OYELAMI JOSEPH', 'C.R.K', 'Second Term', 15.00, 10.00, 25.00, 65.00, 90.00, 'A++', 'VERY GOOD RESULT', 'KEEP IT UP', 'second_term/ayanfe.jpg', '2026-03-26 09:41:13'),
+(12, 'SHEHU UMAIRAH', 'C.R.K', 'Second Term', 12.00, 10.00, 22.00, 53.00, 75.00, 'A', 'GOOD', 'GOOD', 'second_term/umarah.jpg', '2026-03-26 09:43:58'),
+(14, 'SHEHU UMAIRAH', 'INTERMEDIATE SCIENCE', 'Second Term', 13.00, 10.00, 23.00, 55.00, 78.00, 'A', 'KEEP IT UP', 'KEEP IT UP', 'second_term/umarah.jpg', '2026-03-26 10:58:24'),
+(15, 'SHEHU ZAINAB', 'INTERMEDIATE SCIENCE', 'Second Term', 10.00, 10.00, 20.00, 51.00, 71.00, 'AB', 'KEEP IT UP', 'KEEP IT UP', 'second_term/zainab.jpg', '2026-03-26 11:11:38'),
+(16, 'OLAREWAJU AYOMIDE VICTOR', 'INTERMEDIATE SCIENCE', 'Second Term', 11.00, 10.00, 21.00, 48.00, 69.00, 'B', 'KEEP IT UP', 'KEEP IT UP', 'second_term/ayomide.jpg', '2026-03-26 11:12:34'),
+(19, 'OLALEKAN AL-AMEEN', 'INTERMEDIATE SCIENCE', 'Second Term', 12.00, 10.00, 22.00, 31.00, 53.00, 'D', 'WORK MORE', 'WORK MORE', 'default.png', '2026-03-26 13:17:48'),
+(20, 'OYELAMI JOSEPH', 'INTERMEDIATE SCIENCE', 'Second Term', 15.00, 10.00, 25.00, 48.00, 73.00, 'AB', 'KEEP WORKING', 'KEEP WORKING', 'default.png', '2026-03-26 13:56:32'),
+(22, 'OLALEKAN AL-AMEEN', 'LITERATURE', 'Second Term', 10.00, 8.00, 18.00, 60.00, 78.00, 'A', 'KEEP WORKING', 'KEEP WORKING', 'default.png', '2026-03-26 14:01:54'),
+(23, 'OLAREWAJU AYOMIDE VICTOR', 'LITERATURE', 'Second Term', 10.00, 8.00, 18.00, 48.00, 66.00, 'B', 'KEEP WORKING', 'KEEP WORKING', 'default.png', '2026-03-26 14:02:37'),
+(24, 'OYELAMI JOSEPH', 'LITERATURE', 'Second Term', 10.00, 8.00, 18.00, 51.00, 69.00, 'B', 'KEEP WORKING', 'KEEP WORKING', 'default.png', '2026-03-26 14:03:58'),
+(25, 'SHEHU UMAIRAH', 'LITERATURE', 'Second Term', 10.00, 9.00, 19.00, 65.00, 84.00, 'A+', 'KEEP WORKING', 'KEEP WORKING', 'default.png', '2026-03-26 14:04:38'),
+(26, 'SHEHU ZAINAB', 'LITERATURE', 'Second Term', 10.00, 9.00, 19.00, 52.00, 71.00, 'AB', 'KEEP WORKING', 'KEEP WORKING', 'second_term/zainab.jpg', '2026-03-26 14:05:11'),
+(27, 'SHEHU ZAINAB', 'DIGITAL TECHNOLOGY', 'Second Term', 10.00, 10.00, 20.00, 51.00, 71.00, 'AB', 'KEEP WORKING', 'KEEP WORKING', 'second_term/zainab.jpg', '2026-03-26 14:06:45'),
+(28, 'SHEHU UMAIRAH', 'DIGITAL TECHNOLOGY', 'Second Term', 10.00, 10.00, 20.00, 47.00, 67.00, 'B', 'KEEP WORKING', 'KEEP WORKING', 'default.png', '2026-03-26 14:07:36'),
+(29, 'OYELAMI JOSEPH', 'DIGITAL TECHNOLOGY', 'Second Term', 10.00, 12.00, 22.00, 42.00, 64.00, 'BC', 'KEEP WORKING', 'KEEP WORKING', 'default.png', '2026-03-26 14:08:58'),
+(30, 'OLALEKAN AL-AMEEN', 'DIGITAL TECHNOLOGY', 'Second Term', 10.00, 5.00, 15.00, 50.00, 65.00, 'B', 'KEEP WORKING', 'KEEP WORKING', 'default.png', '2026-03-26 14:10:06'),
+(31, 'OLAREWAJU AYOMIDE VICTOR', 'DIGITAL TECHNOLOGY', 'Second Term', 10.00, 7.00, 17.00, 50.00, 67.00, 'B', 'KEEP WORKING', 'KEEP WORKING', 'default.png', '2026-03-26 14:10:59'),
+(34, 'OLALEKAN AL-AMEEN', 'HISTORY', 'Second Term', 10.00, 11.00, 21.00, 55.00, 76.00, 'A', 'KEEP WORKING', 'KEEP WORKING', 'default.png', '2026-03-26 14:14:05'),
+(35, 'OLAREWAJU AYOMIDE VICTOR', 'HISTORY', 'Second Term', 10.00, 12.00, 22.00, 35.00, 57.00, 'BC', 'KEEP WORKING', 'KEEP WORKING', 'default.png', '2026-03-26 14:14:43'),
+(36, 'OYELAMI JOSEPH', 'HISTORY', 'Second Term', 10.00, 13.00, 23.00, 47.00, 70.00, 'AB', 'KEEP WORKING', 'KEEP WORKING', 'default.png', '2026-03-26 14:15:25'),
+(37, 'SHEHU UMAIRAH', 'HISTORY', 'Second Term', 10.00, 12.00, 22.00, 54.00, 76.00, 'A', 'KEEP WORKING', 'KEEP WORKING', 'default.png', '2026-03-26 14:16:27'),
+(38, 'SHEHU ZAINAB', 'HISTORY', 'Second Term', 10.00, 13.00, 23.00, 54.00, 77.00, 'A', 'KEEP WORKING', 'KEEP WORKING', 'second_term/zainab.jpg', '2026-03-26 14:17:19'),
+(39, 'SHEHU ZAINAB', 'BUSINESS STUDIES', 'Second Term', 10.00, 11.00, 21.00, 47.00, 68.00, 'B', 'KEEP WORKING', 'KEEP WORKING', 'second_term/zainab.jpg', '2026-03-26 14:19:03'),
+(40, 'SHEHU UMAIRAH', 'BUSINESS STUDIES', 'Second Term', 10.00, 14.00, 24.00, 52.00, 76.00, 'A', 'KEEP IT UP', 'KEEP IT UP', 'default.png', '2026-03-26 14:19:46'),
+(41, 'OYELAMI JOSEPH', 'BUSINESS STUDIES', 'Second Term', 10.00, 15.00, 25.00, 50.00, 75.00, 'A', 'KEEP IT YP', 'KEEP IT  UP', 'default.png', '2026-03-26 14:21:03'),
+(42, 'OLALEKAN AL-AMEEN', 'BUSINESS STUDIES', 'Second Term', 10.00, 9.00, 19.00, 39.00, 58.00, 'C', 'KEEP WORKING HARD', 'KEEP WORKING HARD', 'default.png', '2026-03-26 14:21:56'),
+(43, 'OLAREWAJU AYOMIDE VICTOR', 'BUSINESS STUDIES', 'Second Term', 10.00, 8.00, 18.00, 27.00, 45.00, 'E', 'KEEP WORKING HARD', 'KEEP WORKING HARD', 'default.png', '2026-03-26 14:22:32'),
+(46, 'OLAREWAJU AYOMIDE VICTOR', 'SOCIAL AND CITIZENSHIP EDUCATION', 'Second Term', 10.00, 14.00, 24.00, 39.00, 63.00, 'BC', 'KEEP WORKING HARD', 'KEEP WORKING HARD', 'default.png', '2026-03-26 14:26:49'),
+(47, 'OLALEKAN AL-AMEEN', 'SOCIAL AND CITIZENSHIP EDUCATION', 'Second Term', 10.00, 19.00, 29.00, 63.00, 92.00, 'A++', 'KEEP WORKING HARD', 'KEEP WORKING HARD', 'default.png', '2026-03-26 14:32:43'),
+(48, 'OYELAMI JOSEPH', 'SOCIAL AND CITIZENSHIP EDUCATION', 'Second Term', 10.00, 14.00, 24.00, 64.00, 88.00, 'A+', 'KEEP WORKING HARD', 'KEEP WORKING HARD', 'default.png', '2026-03-26 14:33:12'),
+(49, 'SHEHU UMAIRAH', 'SOCIAL AND CITIZENSHIP EDUCATION', 'Second Term', 10.00, 17.00, 27.00, 50.00, 77.00, 'A', 'KEEP WORKING HARD', 'KEEP WORKING HARD', 'default.png', '2026-03-26 14:34:11'),
+(50, 'SHEHU ZAINAB', 'SOCIAL AND CITIZENSHIP EDUCATION', 'Second Term', 10.00, 16.00, 26.00, 64.00, 90.00, 'A++', 'KEEP WORKING HARD', 'KEEP WORKING HARD', 'second_term/zainab.jpg', '2026-03-26 14:40:56'),
+(52, 'OLAREWAJU AYOMIDE VICTOR', 'HOME ECONOMICS', 'Second Term', 10.00, 12.00, 22.00, 55.00, 77.00, 'A', 'KEEP WORKING HARD', 'KEEP WORKING HARD', 'default.png', '2026-03-26 14:45:44'),
+(53, 'OYELAMI JOSEPH', 'HOME ECONOMICS', 'Second Term', 10.00, 12.00, 22.00, 54.00, 76.00, 'A', 'WORK HARDER NEXT TERM', 'WORK HARDER NEXT TERM', 'default.png', '2026-03-26 14:50:24'),
+(54, 'OLALEKAN AL-AMEEN', 'HOME ECONOMICS', 'Second Term', 10.00, 11.00, 21.00, 51.00, 72.00, 'AB', 'WORK HARDER NEXT TERM', 'WORK HARDER NEXT TERM', 'default.png', '2026-03-26 14:51:23'),
+(55, 'SHEHU UMAIRAH', 'HOME ECONOMICS', 'Second Term', 10.00, 11.00, 21.00, 56.00, 77.00, 'A', 'WORK HARDER NEXT TERM', 'WORK HARDER NEXT TERM', 'default.png', '2026-03-26 14:52:06'),
+(56, 'SHEHU ZAINAB', 'HOME ECONOMICS', 'Second Term', 10.00, 12.00, 22.00, 52.00, 74.00, 'AB', 'WORK HARDER NEXT TERM', 'WORK HARDER NEXT TERM', 'second_term/zainab.jpg', '2026-03-26 14:52:29'),
+(57, 'SHEHU ZAINAB', 'C.C.A', 'Second Term', 10.00, 9.00, 19.00, 58.00, 77.00, 'A', 'KEEP IT UP', 'KEEP IT UP', 'second_term/zainab.jpg', '2026-03-27 09:29:31'),
+(58, 'SHEHU UMAIRAH', 'C.C.A', 'Second Term', 10.00, 10.00, 20.00, 61.00, 81.00, 'A+', 'KEEP IT UP', 'KEEP IT UP', 'default.png', '2026-03-27 09:43:22'),
+(59, 'OYELAMI JOSEPH', 'C.C.A', 'Second Term', 10.00, 6.00, 16.00, 41.00, 57.00, 'C', 'KEEP IT UP', 'KEEP IT UP', 'default.png', '2026-03-27 09:46:05'),
+(60, 'OLALEKAN AL-AMEEN', 'C.C.A', 'Second Term', 10.00, 8.00, 18.00, 52.00, 70.00, 'AB', 'KEEP IT UP', 'KEEP IT UP', 'default.png', '2026-03-27 09:46:45'),
+(61, 'OLAREWAJU AYOMIDE VICTOR', 'C.C.A', 'Second Term', 10.00, 8.00, 18.00, 41.00, 59.00, 'D', 'KEEP IT UP', 'KEEP IT UP', 'default.png', '2026-03-27 09:48:48'),
+(64, 'OLALEKAN AL-AMEEN', 'ENGLISH LANGUAGE', 'Second Term', 13.00, 10.00, 23.00, 50.00, 73.00, 'AB', 'WORK HARDER NEXT TIME', 'WORK HARDER NEXT TIME', 'default.png', '2026-03-27 11:14:25'),
+(65, 'ADENIJI JUBRIL', 'ENGLISH LANGUAGE', 'Second Term', 13.00, 10.00, 23.00, 46.00, 69.00, 'B', 'WORK HARDER NEXT TIME', 'WORK HARDER NEXT TIME', 'second_term/jubril.jpg', '2026-03-27 11:15:48'),
+(66, 'OLAREWAJU AYOMIDE VICTOR', 'ENGLISH LANGUAGE', 'Second Term', 13.00, 10.00, 23.00, 51.00, 74.00, 'AB', 'WORK HARDER NEXT TIME', 'WORK HARDER NEXT TIME', 'default.png', '2026-03-27 11:17:23'),
+(67, 'SHEHU UMAIRAH', 'ENGLISH LANGUAGE', 'Second Term', 15.00, 10.00, 25.00, 56.00, 81.00, 'A+', 'KEEP IT UP', 'KEEP IT UP', 'default.png', '2026-03-27 11:23:09'),
+(68, 'SHEHU ZAINAB', 'ENGLISH LANGUAGE', 'Second Term', 16.00, 10.00, 26.00, 55.00, 81.00, 'A+', 'KEEP IT UP', 'KEEP IT UP', 'second_term/zainab.jpg', '2026-03-27 11:24:04'),
+(69, 'OYELAMI JOSEPH', 'ENGLISH LANGUAGE', 'Second Term', 13.00, 10.00, 23.00, 49.00, 72.00, 'AB', 'KEEP IT UP', 'KEEP IT UP', 'default.png', '2026-03-27 11:24:40'),
+(70, 'ADENIJI JUBRIL', 'MATHS', 'Second Term', 10.00, 8.00, 18.00, 42.00, 60.00, 'BC', 'WORK HARDER NEXT TERM', 'WORK HARDER NEXT TERM', 'default.png', '2026-03-27 11:30:08'),
+(71, 'ADENIJI JUBRIL', 'LITERATURE', 'Second Term', 10.00, 7.00, 17.00, 49.00, 66.00, 'BC', 'KEEP WORKING HARD', 'KEEP WORKING HARD', 'default.png', '2026-03-27 11:58:32'),
+(72, 'ADENIJI JUBRIL', 'C.R.K', 'Second Term', 12.00, 7.00, 19.00, 40.00, 59.00, 'C', 'KEEP WORKING HARD', 'KEEP WORKING HARD', 'default.png', '2026-03-27 11:59:02'),
+(73, 'ADENIJI JUBRIL', 'INTERMEDIATE SCIENCE', 'Second Term', 14.00, 10.00, 24.00, 32.00, 56.00, 'C', 'KEEP WORKING HARD', 'KEEP WORKING HARD', 'default.png', '2026-03-27 12:00:05'),
+(74, 'ADENIJI JUBRIL', 'DIGITAL TECHNOLOGY', 'Second Term', 10.00, 10.00, 20.00, 51.00, 71.00, 'AB', 'KEEP WORKING HARD', 'KEEP WORKING HARD', 'default.png', '2026-03-27 12:00:45'),
+(75, 'ADENIJI JUBRIL', 'HISTORY', 'Second Term', 10.00, 9.00, 19.00, 40.00, 59.00, 'C', 'KEEP WORKING HARD', 'KEEP WORKING HARD', 'default.png', '2026-03-27 12:01:30'),
+(76, 'ADENIJI JUBRIL', 'BUSINESS STUDIES', 'Second Term', 10.00, 11.00, 21.00, 36.00, 57.00, 'C', 'KEEP WORKING HARD', 'KEEP WORKING HARD', 'default.png', '2026-03-27 12:02:02'),
+(77, 'ADENIJI JUBRIL', 'YORUBA', 'Second Term', 10.00, 7.00, 17.00, 56.00, 73.00, 'AB', 'KEEP WORKING HARD', 'KEEP WORKING HARD', 'default.png', '2026-03-27 12:03:17'),
+(78, 'ADENIJI JUBRIL', 'SOCIAL AND CITIZENSHIP EDUCATION', 'Second Term', 10.00, 12.00, 22.00, 36.00, 58.00, 'C', 'KEEP WORKING HARD', 'KEEP WORKING HARD', 'default.png', '2026-03-27 12:04:11'),
+(79, 'ADENIJI JUBRIL', 'C.C.A', 'Second Term', 7.00, 12.00, 19.00, 48.00, 67.00, 'B', 'KEEP WORKING HARD', 'KEEP WORKING HARD', 'default.png', '2026-03-27 12:05:09'),
+(80, 'ADENIJI JUBRIL', 'HOME ECONOMICS', 'Second Term', 10.00, 10.00, 20.00, 51.00, 71.00, 'AB', 'KEEP WORKING HARD', 'KEEP WORKING HARD', 'default.png', '2026-03-27 12:06:21'),
+(81, 'ADENIJI JUBRIL', 'P.H.E', 'Second Term', 10.00, 15.00, 25.00, 53.00, 78.00, 'A', 'KEEP IT UP', 'KEEP IT UP', 'default.png', '2026-03-27 12:45:03'),
+(82, 'OLALEKAN AL-AMEEN', 'P.H.E', 'Second Term', 10.00, 14.00, 24.00, 63.00, 87.00, 'A+', 'KEEP IT UP', 'KEEP IT UP', 'default.png', '2026-03-27 12:45:32'),
+(83, 'OLAREWAJU AYOMIDE VICTOR', 'P.H.E', 'Second Term', 10.00, 9.00, 19.00, 60.00, 74.00, 'AB', 'KEEP IT UP', 'KEEP IT UP', 'default.png', '2026-03-27 12:47:36'),
+(84, 'OYELAMI JOSEPH', 'P.H.E', 'Second Term', 10.00, 16.00, 26.00, 61.00, 87.00, 'A+', 'KEEP IT UP', 'KEEP IT UP', 'default.png', '2026-03-27 12:48:20'),
+(85, 'SHEHU UMAIRAH', 'P.H.E', 'Second Term', 10.00, 17.00, 27.00, 60.00, 87.00, 'A++', 'KEEP IT UP', 'KEEP IT UP', 'default.png', '2026-03-30 09:03:51'),
+(86, 'SHEHU ZAINAB', 'P.H.E', 'Second Term', 10.00, 15.00, 25.00, 58.00, 83.00, 'A+', 'KEEP IT UP', 'KEEP IT UP', 'default.png', '2026-03-30 09:06:25'),
+(87, 'SHEHU ZAINAB', 'YORUBA', 'Second Term', 10.00, 12.00, 22.00, 56.00, 78.00, 'A', 'KEEP IT UP', 'KEEP IT UP', 'default.png', '2026-03-30 09:12:06'),
+(88, 'OLALEKAN AL-AMEEN', 'YORUBA', 'Second Term', 10.00, 11.00, 21.00, 48.00, 69.00, 'B', 'KEEP IT UP', 'KEEP IT UP', 'default.png', '2026-03-30 09:42:20'),
+(89, 'OYELAMI JOSEPH', 'YORUBA', 'Second Term', 10.00, 10.00, 20.00, 49.00, 69.00, 'B', 'KEEP IT UP', 'KEEP IT UP', 'default.png', '2026-03-30 09:45:22'),
+(90, 'OLAREWAJU AYOMIDE VICTOR', 'YORUBA', 'Second Term', 10.00, 7.00, 17.00, 54.00, 71.00, 'B', 'KEEP IT UP', 'KEEP IT UP', 'default.png', '2026-03-30 09:47:33'),
+(91, 'SHEHU UMAIRAH', 'YORUBA', 'Second Term', 10.00, 9.00, 19.00, 58.00, 77.00, 'A', 'KEEP IT UP', 'KEEP IT UP', 'default.png', '2026-03-30 09:50:37');
 
 -- --------------------------------------------------------
 
@@ -1669,7 +1777,7 @@ CREATE TABLE `settings` (
 --
 
 INSERT INTO `settings` (`id`, `school_name`, `address`, `phone_number`, `email`, `face_book`) VALUES
-(1, 'DE-LAMBO INTERNATIONAL COLLEGE', 'ELEWERAN/AREGBE, ABEOKUTA OGUN STATE', '08135640906', 'email@delamboschools', 'delamboschools');
+(1, 'DE-LAMBO INTERNATIONAL COLLEGE', 'NO.14, ANIGILAGI,ELEWERAN/AREGBE, ABEOKUTA OGUN STATE', '08135640906', 'email@delamboschools', 'delamboschools');
 
 -- --------------------------------------------------------
 
@@ -1684,6 +1792,7 @@ CREATE TABLE `students` (
   `email` varchar(225) DEFAULT NULL,
   `address` varchar(225) DEFAULT NULL,
   `class` text NOT NULL,
+  `admision_number` varchar(225) NOT NULL,
   `image` varchar(55) DEFAULT NULL,
   `password` varchar(55) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -1692,13 +1801,13 @@ CREATE TABLE `students` (
 -- Dumping data for table `students`
 --
 
-INSERT INTO `students` (`id`, `name`, `username`, `email`, `address`, `class`, `image`, `password`) VALUES
-(1, 'SHEHU UMAIRAH', 'UMAIRAH0001', 'shehuumairah@gmail.com', 'Aregbe, Abeokuta', 'JSS1', 'passports/umarah.jpg', 'UMAIRAH001'),
-(2, 'SHEHU ZAINAB', 'ZAINAB001', 'shehuzainab@gmail.com', 'Aregbe, Abeokuta', 'JSS1', NULL, 'ZAINAB001'),
-(3, 'ADENIJI JUBRIL', 'JUBRIL001', 'adenijijubril@gmail.com', 'Akingbala, Abeokuta', 'JSS1', 'passports/jubril.jpg', 'JUBRIL001'),
-(4, 'OLALEKAN AL-AMEEN', 'AL-AMEEN001', 'olalekanalameen@gmail.com', 'OSHIELE', 'JSS1', 'passports/al-ameen.jpg', 'AL-AMEEN001'),
-(5, 'OLAREWAJU AYOMIDE', 'AYOMIDE001', 'ayomide@gmail.com', 'Aregbe, Abeokuta', 'JSS1', 'passports/ayomide.jpg', 'AYOMIDE001'),
-(6, 'OYELAMI JOSEPH', 'JOSEPH001', 'joseph@gmail.com', 'Aregbe,Abeokuta', 'JSS1', 'passports/ayanfe.jpg', 'JOSEPH001');
+INSERT INTO `students` (`id`, `name`, `username`, `email`, `address`, `class`, `admision_number`, `image`, `password`) VALUES
+(1, 'SHEHU UMAIRAH', 'UMAIRAH0001', 'shehuumairah@gmail.com', 'Aregbe, Abeokuta', 'JSS1', '1003', 'passports/umarah.jpg', 'UMAIRAH001'),
+(2, 'SHEHU ZAINAB', 'ZAINAB001', 'shehuzainab@gmail.com', 'Aregbe, Abeokuta', 'JSS1', '1002', NULL, 'ZAINAB001'),
+(3, 'ADENIJI JUBRIL', 'JUBRIL001', 'adenijijubril@gmail.com', 'Akingbala, Abeokuta', 'JSS1', '1001', 'passports/jubril.jpg', 'JUBRIL001'),
+(4, 'OLALEKAN AL-AMEEN', 'AL-AMEEN001', 'olalekanalameen@gmail.com', 'OSHIELE', 'JSS1', '1004', 'passports/al-ameen.jpg', 'AL-AMEEN001'),
+(5, 'OLAREWAJU AYOMIDE VICTOR', 'AYOMIDE001', 'ayomide@gmail.com', 'Aregbe, Abeokuta', 'JSS1', '1005', 'passports/ayomide.jpg', 'AYOMIDE001'),
+(6, 'OYELAMI JOSEPH', 'JOSEPH001', 'joseph@gmail.com', 'Aregbe,Abeokuta', 'JSS1', '1006', 'passports/ayanfe.jpg', 'JOSEPH001');
 
 -- --------------------------------------------------------
 
@@ -2833,6 +2942,12 @@ ALTER TABLE `result`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `second_term`
+--
+ALTER TABLE `second_term`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `settings`
 --
 ALTER TABLE `settings`
@@ -2901,6 +3016,12 @@ ALTER TABLE `exam`
 --
 ALTER TABLE `result`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+
+--
+-- AUTO_INCREMENT for table `second_term`
+--
+ALTER TABLE `second_term`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
 
 --
 -- AUTO_INCREMENT for table `settings`
