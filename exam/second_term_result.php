@@ -2,6 +2,7 @@
 
 <?php
 // Database connection
+require 'admin/config.php';
 $host = 'localhost'; $db = 'de_lambo'; $user = 'root'; $pass = '';
 $dsn = "mysql:host=$host;dbname=$db;charset=utf8mb4";
 try {
@@ -10,7 +11,9 @@ try {
 
 // Fetch all results ordered by name
 $results = $pdo->query("SELECT * FROM second_term ORDER BY student_name ASC")->fetchAll();
+$select = $conn->query('SELECT * FROM settings');
 
+$school = $select->fetch_assoc();
 // Group subjects by Student Name
 $students = [];
 foreach ($results as $row) {
@@ -18,14 +21,15 @@ foreach ($results as $row) {
 }
 
 function getGradeData($total) {
-    if ($total >=80 && $total<= 100 ) return ['bg' => '#dcfce7', 'text' => '#15803d', 'grade' => 'A+'];
-    if ($total >=75 && $total<= 80) return ['bg' => '#f0fdf4', 'text' => '#16a34a', 'grade' => 'A+'];
-    if ($total >=70 && $total<=75) return ['bg' => '#ecfeff', 'text' => '#0891b2', 'grade' => 'AB'];
-    if ($total >= 65  && $total<=70) return ['bg' => '#e0f2fe', 'text' => '#0369a1', 'grade' => 'B'];
-    if ($total >= 60  && $total<=65) return ['bg' => '#fef9c3', 'text' => '#a16207', 'grade' => 'BC'];
+    if ($total <=100 && $total>=80 ) return ['bg' => '#dcfce7', 'text' => '#006400', 'grade' => 'A++'];
+    if ($total >=80 && $total<=85) return ['bg' => '#f0fdf4', 'text' => '#228B22', 'grade' => 'A+'];
+    if ($total >=75 && $total<80) return ['bg' => '#ecfeff', 'text' => '#00800', 'grade' => 'A'];
+    if ($total >=70 && $total<75) return ['bg' => '#ecfeff', 'text' => '#90EE90', 'grade' => 'AB'];
+    if ($total >= 65  && $total<70) return ['bg' => '#e0f2fe', 'text' => '#2E8B57', 'grade' => 'B'];
+    if ($total >= 60  && $total<65) return ['bg' => '#fef9c3', 'text' => '#a16207', 'grade' => 'BC'];
     if ($total >= 55  && $total<=59) return ['bg' => '#e0f2fe', 'text' => '#0369a1', 'grade' => 'C'];
-    if ($total >= 50  && $total<=55) return ['bg' => '#e0f2fe', 'text' => '#0369a1', 'grade' => 'CD'];
-    if ($total >= 40  && $total<=49) return ['bg' => '#e0f2fe', 'text' => '#0369a1', 'grade' => 'CD'];
+    if ($total >= 50  && $total<55) return ['bg' => '#e0f2fe', 'text' => '#0369a1', 'grade' => 'CD'];
+    if ($total >= 40  && $total<50) return ['bg' => '#e0f2fe', 'text' => '#0369a1', 'grade' => 'D'];
     if ($total >= 40 && $total<=45) return ['bg' => '#ffedd5', 'text' => '#c2410c', 'grade' => 'E'];
     return ['bg' => '#fee2e2', 'text' => '#b91c1c', 'grade' => 'F'];
 }
@@ -52,7 +56,7 @@ function getGradeData($total) {
         /* Report Card - Large Centered Design */
         .report-wrapper { 
             background: white; 
-            max-width: 600px; 
+            max-width: 650px; 
             margin: 0 auto 60px auto; 
             padding: 50px; 
             border-radius: 8px; 
@@ -60,23 +64,34 @@ function getGradeData($total) {
             position: relative;
             border-top: 10px solid #1e293b;
         }
-
-        .report-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 40px; border-bottom: 2px solid #f1f5f9; padding-bottom: 20px; }
-        .school-brand h2 { margin: 0; font-size: 1.8rem; color: #0f172a; }
+        hr{
+            border:2px solid crimson;
+        }
+        .report-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 40px; border-bottom: 2px solid crimson; padding-bottom: 20px; }
+        .school-brand h2 { margin: 0; font-size: 1.8rem; color: crimson; }
         .student-meta { margin-top: 10px; line-height: 1.6; }
-        .student-photo { width: 110px; height: 110px; border-radius: 8px; object-fit: cover; border: 4px solid #f1f5f9; }
+        .student-photo { width: 110px; height: 120px; border-radius: 8px; object-fit: cover; border: 4px solid crimson; }
 
         /* Results Table */
         table { width: 100%; border-collapse: collapse; margin: 30px 0; }
-        th { text-align: left; padding: 12px; background: #f8fafc; font-size: 0.75rem; text-transform: uppercase; color: #64748b; border-bottom: 2px solid #e2e8f0; }
-        td { padding: 14px 12px; border-bottom: 1px solid #f1f5f9; font-size: 0.95rem; }
+        th { text-align: left; padding: 12px; background: #f8fafc; font-size: 0.75rem; text-transform: uppercase; color: #64748b; border-bottom: 2px solid crimson; }
+        td { padding: 14px 12px; border-bottom: 1px solid crimson; font-size: 0.95rem; }
         .subject-name { font-weight: 700; color: #334155; }
         .grade-chip { padding: 4px 12px; border-radius: 4px; font-weight: 800; font-size: 0.8rem; }
 
         /* Remarks Section */
-        .remarks-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 40px; border-top: 2px solid #f1f5f9; padding-top: 30px; }
+        .remarks-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px; border-top: 2px solid #f1f5f9; padding-top: 30px; }
         .remark-item h4 { margin: 0 0 10px 0; font-size: 0.8rem; text-transform: uppercase; color: #94a3b8; letter-spacing: 0.5px; }
-        .remark-content { background: #f8fafc; padding: 15px; border-radius: 8px; border: 1px solid #edf2f7; font-style: italic; min-height: 60px; line-height: 1.5; color: #334155; }
+        .remark-content { background: #f8fafc; padding: 10px; border-radius: 8px; border: 1px solid crimson; font-style: italic; min-height: 30px; line-height: 1.5; color: #334155; }
+.info h2{
+text-align:center;
+}
+.address{
+    text-align:center;
+}
+.marking h3{
+text-align:center;
+}
 
         @media print {
             .no-print-zone { display: none !important; }
@@ -92,7 +107,7 @@ function getGradeData($total) {
 
 <div class="no-print-zone">
     <input type="text" id="searchBox" placeholder="🔍 Search student name..." onkeyup="searchStudent()">
-    <button onclick="window.print()" class="print-btn">Print Report Cards</button>
+    <button onclick="window.print()" class="print-btn">Print Result Sheet</button>
 </div>
 
 <div id="reportsContainer">
@@ -101,10 +116,21 @@ function getGradeData($total) {
         $grandTotal = 0;
     ?>
     <div class="report-wrapper">
+        <div class="info">
+<img src="logo.png" alt="" style="width:60px; height: 60px;">
+            <h2>
+      
+                <?php  echo $school['school_name'];?>
+            </h2>
+          <div class='address'> Address: <small><?php echo $school['address'];?></small> </div> 
+
+        </div>
+        <hr>
         <div class="report-header">
+            
 
             <div class="school-brand">
-                <h2>ACADEMIC REPORT CARD</h2>
+                <h4>STUDENT RESULT SHEET</h4>
                 <div class="student-meta">
                     <strong>NAME:</strong> <?= htmlspecialchars($name) ?><br>
                     <strong>TERM:</strong> <?= htmlspecialchars($info['term']) ?><br>
@@ -145,14 +171,35 @@ function getGradeData($total) {
                 <?php endforeach; ?>
             </tbody>
         </table>
+<hr style=""><br>
+<div style ="display:flex; gap:200px;">
 
-        <div style="text-align: right; margin-top: 10px;">
-            <p style="font-size: 1.1rem;"><strong>Overall Average:</strong> 
-                <span style="color: #2563eb; font-size: 1.3rem;">
-                    <?= number_format($grandTotal / count($subjectEntries), 2) ?>%
-                </span>
-            </p>
-        </div>
+    <div style="text-align: left; margin-top: 10px;">
+                <p style="font-size: 1.1rem;"><strong>Number of Subjects:</strong> 
+                    <span style="color: #2563eb; font-size: 1.3rem;">
+                        <?php 
+                        // $name = $name['student_name'];
+                        $select2 = $conn->query("SELECT * FROM second_term WHERE student_name = '$name'");
+                        if($select2->num_rows>0){
+    
+                            $count = $select2->num_rows;
+                        }else{
+                            $count = '';
+                        }
+                        
+                        ?>
+                        <?= $count; ?>
+                    </span>
+                </p>
+            </div>
+            <div style="text-align: right; margin-top: 10px;">
+                <p style="font-size: 1.1rem;"><strong>Overall Average:</strong> 
+                    <span style="color: #2563eb; font-size: 1.3rem;">
+                        <?= number_format($grandTotal / count($subjectEntries), 2) ?>%
+                    </span>
+                </p>
+            </div>
+</div>
 
         <div class="remarks-grid">
             <div class="remark-item">
@@ -170,14 +217,71 @@ function getGradeData($total) {
         </div>
 
         <div style="margin-top: 50px; display: flex; justify-content: space-between;">
-            <div style="border-top: 1px solid #334155; width: 200px; text-align: center; padding-top: 5px; font-size: 0.8rem;">Class Teacher Signature</div>
-            <div style="border-top: 1px solid #334155; width: 200px; text-align: center; padding-top: 5px; font-size: 0.8rem;">Principal Signature</div>
+            <div style="border-top: 1px solid crimson; width: 200px; text-align: center; padding-top: 5px; font-size: 0.8rem;">Class Teacher Signature</div>
+            <div style="border-top: 1px solid crimson; width: 200px; text-align: center; padding-top: 5px; font-size: 0.8rem;">Principal Signature</div>
+        </div>
+        <br>
+        <hr> <br>
+        <div class="marking">
+            <h3>
+                GRADING 
+            </h3>
+            <table>
+                <tr>
+                    <th>SCORE</th><th>GRADE</th>
+                </tr>
+                <tr>
+                    <td>0-39</td>
+                    <td>F</td>
+                </tr>
+                  <tr>
+                    <td>40-44</td>
+                    <td>E</td>
+                </tr>
+                 <tr>
+                    <td>45-49</td>
+                    <td>DE</td>
+                </tr>
+                <tr>
+                    <td>50-54</td>
+                    <td>D</td>
+                </tr>
+                <tr>
+                    <td>55-59</td>
+                    <td>C</td>
+                </tr>
+                <tr>
+                    <td>60-64</td>
+                    <td>BC</td>
+                </tr>
+                <tr>
+                    <td>65-69</td>
+                    <td>B</td>
+                </tr>
+                <tr>
+                    <td>70-74</td>
+                    <td>AB</td>
+                </tr>
+                <tr>
+                    <td>75-79</td>
+                    <td>A</td>
+                </tr>
+                <tr>
+                    <td>80-85</td>
+                    <td>A+</td>
+                </tr>
+                <tr>
+                    <td>85-100</td>
+                    <td>A++</td>
+                </tr>
+            </table>
+            <hr>
         </div>
         <div style="margin-top:30px; margin-bottom: 30px;" id="edit-button">
              <a href="edit_student.php?name=<?= urlencode($name) ?>" 
-           style="background: #f1f5f9; color: #2563eb; padding: 5px 12px; border-radius: 4px; text-decoration: none; font-size: 0.8rem; border: 1px solid #cbd5e1; font-weight: bold;">
-           ✏️ Edit Marks
-        </a>
+             style="background: #f1f5f9; color: #2563eb; padding: 5px 12px; border-radius: 4px; text-decoration: none; font-size: 0.8rem; border: 1px solid #cbd5e1; font-weight: bold;">
+             ✏️ Edit Marks
+            </a>
         </div>
     </div>
     <?php endforeach; ?>
